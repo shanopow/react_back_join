@@ -4,16 +4,14 @@ const drawDegree = (jsl) => {
   return (
     <div>
       <h2>{jsl.full_name}</h2>
-      <p>ShortCode: {jsl.shortcode}</p>
+      <p>Shortcode: {jsl.shortcode}</p>
     </div>
   )
 };
 
+
 function DegreeList() {
   const [degrees, setdegrees] = useState([])
-  const displayDegrees = () => {
-    return degrees.map(element => <div>{drawDegree(element)}</div>);
-  };
   
   useEffect(() => {
     fetch("http://127.0.0.1:8000/api/degree")
@@ -23,6 +21,10 @@ function DegreeList() {
       })
       .catch(error => console.log(error));
   });
+  
+  const displayDegrees = () => {
+    return degrees.map(element => <div>{drawDegree(element)}</div>);
+  };
   
   return (
     <div>

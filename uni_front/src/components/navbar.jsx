@@ -10,9 +10,12 @@ function navbar() {
         </li>
         <li>
             <Link to="/degrees">Degrees</Link>
-            </li>
-            <li>
+        </li>
+        <li>
             <Link to="/cohorts">Cohorts</Link>
+        </li>
+        <li>
+            <Link to="/modules">Cohorts</Link>
         </li>
         </ul>
     </nav>

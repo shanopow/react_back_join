@@ -4,6 +4,7 @@ import DegreeList from '../components/displays/DegreeList';
 function Degrees() {  
     return(
         <div>
+        <p>Use "degrees/id" for individual pages</p>
         <DegreeList/>
         </div>
     );
