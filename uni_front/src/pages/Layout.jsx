@@ -1,6 +1,6 @@
 import React from "react";
 import {Outlet} from "react-router-dom";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navbar";
 
 const Layout = () => {
   return (
@@ -12,18 +12,3 @@ const Layout = () => {
 };
 
 export default Layout;
-
-
-/*
-import DegreeList from './components/displays/getDegrees';
-
-function App() {
-  return (
-  <div className="App">
-    <DegreeList/>
-  </div>
-  );
-}
-
-export default App;
-*/

@@ -1,7 +1,7 @@
 import React from "react";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-function Navbar() {
+function navbar() {
   return (
         <nav>
         <ul>
@@ -19,4 +19,4 @@ function Navbar() {
     );
 }
 
-export default Navbar;
+export default navbar;

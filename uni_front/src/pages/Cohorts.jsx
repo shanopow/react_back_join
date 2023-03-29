@@ -1,9 +1,12 @@
 import React from 'react';
+import CohortList from '../components/displays/CohortList';
 
-function Home() {  
+function Cohorts() {  
     return(
-        <h1>Where Cohorts will go</h1>
+        <div>
+        <CohortList/>
+        </div>
     );
 }
 
-export default Home;
+export default Cohorts;

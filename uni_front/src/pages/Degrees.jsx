@@ -1,9 +1,12 @@
 import React from 'react';
+import DegreeList from '../components/displays/DegreeList';
 
-function Home() {  
+function Degrees() {  
     return(
-        <h1>Where Degrees will go</h1>
+        <div>
+        <DegreeList/>
+        </div>
     );
 }
 
-export default Home;
+export default Degrees;
