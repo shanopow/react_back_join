@@ -15,7 +15,7 @@ function navbar() {
             <Link to="/cohorts">Cohorts</Link>
         </li>
         <li>
-            <Link to="/modules">Cohorts</Link>
+            <Link to="/modules">Modules</Link>
         </li>
         </ul>
     </nav>
