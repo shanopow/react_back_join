@@ -13,6 +13,7 @@ import Cohorts from "./pages/Cohorts";
 
 import Module from "./pages/SingleModule";
 import Modules from "./pages/Modules";
+import ModuleDelivered from "./pages/ModuleDelivered";
 
 export default function App() {
   return (
@@ -20,12 +21,17 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="degrees" element={<Degrees />} />
+          
+          <Route path="degrees" element={<Degrees />} />
           <Route path="degrees/:shortcode" element={<Degree />} />
-          <Route path="cohorts" element={<Cohorts />} />
+          
+          <Route path="cohorts" element={<Cohorts />} />
           <Route path="cohorts/:id" element={<Cohort />} />
+          
           <Route path="modules" element={<Modules />} />
           <Route path="modules/:code" element={<Module />} />
+          <Route path="modules/delivered/:delivered" element={<ModuleDelivered />} />
+
           <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
