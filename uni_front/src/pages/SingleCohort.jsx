@@ -5,8 +5,7 @@ import { useParams } from 'react-router-dom';
 const drawCohort = (jsl) => {  
   return (
       <div>
-        <h2>{jsl.full_name}</h2>
-        <p>ID: {jsl.id}</p>
+        <h3>ID: {jsl.id}</h3>
         <p>Year: {jsl.year}</p>
         <p>Degree: {jsl.degree}</p>
         <p>Name: {jsl.name}</p>
@@ -17,7 +16,7 @@ const drawCohort = (jsl) => {
 const drawStudents = (jsl) =>{
   return (
     <div>
-      <h2>ID: {jsl.student_id}</h2>
+      <h3>ID: {jsl.student_id}</h3>
       <p>First Name: {jsl.first_name}</p>
       <p>Last Name: {jsl.last_name}</p>
       <p>Cohort: {jsl.cohort}</p>
@@ -52,6 +51,7 @@ function Cohort() {
     return (
       <div>
         <hr/>
+        <h1>Cohort</h1>
         {drawCohort(cohort)}
         <h1>Students</h1>
         {displayStudents(students)}

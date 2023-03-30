@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 const drawModule = (jsl) => {
     return (
         <div>
-        <h2>{jsl.code}</h2>
+        <h3>{jsl.code}</h3>
         <p>Full Name: {jsl.full_name}</p>
         <p>Delivered to: {jsl.delivered_to}</p>
         <p>Ca Split: {jsl.ca_split}</p>
