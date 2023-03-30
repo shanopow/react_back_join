@@ -15,6 +15,8 @@ import Module from "./pages/SingleModule";
 import Modules from "./pages/Modules";
 import ModuleDelivered from "./pages/ModuleDelivered";
 
+import Student from "./pages/SingleStudent";
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -31,6 +33,8 @@ export default function App() {
           <Route path="modules" element={<Modules />} />
           <Route path="modules/:code" element={<Module />} />
           <Route path="modules/delivered/:delivered" element={<ModuleDelivered />} />
+
+          <Route path="student/:id" element={<Student />} />
 
           <Route path="*" element={<PageNotFound />} />
         </Route>
