@@ -15,21 +15,48 @@ const drawStudent = (jsl) =>{
     )
   };
 
+const drawGrades = (jsl) => {
+    return (
+      <div>
+        <h2>{jsl.id}</h2>
+        <p>Module: {jsl.module}</p>
+        <p>Ca mark: {jsl.ca_mark}</p>
+        <p>Exam mark: {jsl.exam_mark}</p>
+        <p>Total Grade: {jsl.total_grade}</p>
+      </div>
+    )
+};
+  
+
+
 function Student() {
     const { id } = useParams();
-    const [student, setstudent] = useState({})
+    const [student, setstudent] = useState({});
+    const [grades, setgrades] = useState([]);
     useEffect(() => {
       fetch(`http://127.0.0.1:8000/api/student/${id}`)
         .then(response => response.json())
         .then(data => {
           setstudent(data);
         })
+
+        fetch(`http://127.0.0.1:8000/api/grade/?student=${id}`).then(response => response.json())
+        .then(data => {
+          setgrades(data);
+        })
         .catch(error => console.log(error));
     });
+
+    const displayGrades = () => {
+      return grades.map(element => <div>{drawGrades(element)}</div>);
+    };
+
     return (
       <div>
         <hr/>
         {drawStudent(student)}
+        <h1>Grades</h1>
+        {displayGrades(grades)}
       </div>
     )
   }

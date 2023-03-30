@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 
 const drawModule = (jsl) => {
+  
   return (
     <div>
       <h2>{jsl.code}</h2>
       <p>Full Name: {jsl.full_name}</p>
-      <p>Delivered to: {jsl.delivered_to}</p>
+      <p>Delivered to: <ul>{jsl.delivered_to.map(element => <li>{element}</li>)} </ul></p> 
       <p>Ca Split: {jsl.ca_split}</p>
     </div>
   )
@@ -31,7 +32,7 @@ function ModuleList() {
   return (
     <div>
       <hr/>
-      <h1>Degrees</h1>
+      <h1>Modules</h1>
       {displayModules()}
     </div>
   );

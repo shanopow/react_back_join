@@ -7,7 +7,7 @@ const drawModule = (jsl) => {
         <div>
         <h3>{jsl.code}</h3>
         <p>Full Name: {jsl.full_name}</p>
-        <p>Delivered to: {jsl.delivered_to}</p>
+        <p>Delivered to: <ul>{jsl.delivered_to.map(element => <li>{element}</li>)} </ul></p> 
         <p>Ca Split: {jsl.ca_split}</p>
       </div>
     )
