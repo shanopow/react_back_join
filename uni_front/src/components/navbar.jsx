@@ -17,6 +17,9 @@ function navbar() {
         <li>
             <Link to="/modules">Modules</Link>
         </li>
+        <li>
+            <Link to="/students">Students</Link>
+        </li>
         </ul>
     </nav>
     );

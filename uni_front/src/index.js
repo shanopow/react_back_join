@@ -7,15 +7,19 @@ import PageNotFound from "./pages/404";
 
 import Degree from "./pages/SingleDegree";
 import Degrees from "./pages/Degrees";
+import DegreeForm from "./displays/forms/DegreeForm";
 
 import Cohort from "./pages/SingleCohort";
 import Cohorts from "./pages/Cohorts";
+import CohortForm from "./pages/CohortForm";
 
 import Module from "./pages/SingleModule";
 import Modules from "./pages/Modules";
 import ModuleDelivered from "./pages/ModuleDelivered";
 
+import Students from "./pages/Students";
 import Student from "./pages/SingleStudent";
+import StudentForm from "./components/displays/forms/StudentForm";
 
 export default function App() {
   return (
@@ -26,15 +30,21 @@ export default function App() {
           
           <Route path="degrees" element={<Degrees />} />
           <Route path="degrees/:shortcode" element={<Degree />} />
-          
+          <Route path="degrees/new" element={<DegreeForm />} />
+
           <Route path="cohorts" element={<Cohorts />} />
           <Route path="cohorts/:id" element={<Cohort />} />
-          
+          <Route path="cohorts/new" element={<CohortForm />} />
+ 
           <Route path="modules" element={<Modules />} />
           <Route path="modules/:code" element={<Module />} />
           <Route path="modules/delivered/:delivered" element={<ModuleDelivered />} />
+          <Route path="modules/new" element={<ModuleForm />} />
+ 
+          <Route path="students" element={<Students />} />
+          <Route path="students/:id" element={<Student />} />
+          <Route path="students/new" element={<ModuleForm />} />
 
-          <Route path="student/:id" element={<Student />} />
 
           <Route path="*" element={<PageNotFound />} />
         </Route>

@@ -3,8 +3,7 @@ import { useState, useEffect } from "react";
 const drawCohort = (jsl) => {
   return (
     <div>
-      <h2>{jsl.full_name}</h2>
-      <p>ID: {jsl.id}</p>
+      <h2>{jsl.id}</h2>
       <p>Year: {jsl.year}</p>
       <p>Degree: {jsl.degree}</p>
       <p>Name: {jsl.name}</p>

@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 const drawDegree = (jsl) => {
   return (
     <div>
-      <h2>{jsl.full_name}</h2>
-      <p>Shortcode: {jsl.shortcode}</p>
+      <h2>{jsl.shortcode}</h2>
+      <p>Full Name: {jsl.full_name}</p>
     </div>
   )
 };
