@@ -77,7 +77,7 @@ const ModuleForm = () => {
       {status !== "loading" && (
         <div className="mb-3 pt-0">
           <button type="submit">
-            Send a message
+            Submit
           </button>
         </div>
       )}

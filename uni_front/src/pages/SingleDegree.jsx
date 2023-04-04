@@ -24,19 +24,24 @@ const drawDegree = (jsl) => {
   
 function Degree() {
     const { shortcode } = useParams();
-    const [degree, setdegree] = useState({});
+    const [degree, setdegree] = useState([]);
     const [cohorts, setCohorts] = useState([]);
     useEffect(() => {
-      fetch(`http://127.0.0.1:8000/api/degree/${shortcode}`).then(response => response.json())
+      if (degree == 0){
+        fetch(`http://127.0.0.1:8000/api/degree/${shortcode}`).then(response => response.json())
         .then(data => {
           setdegree(data);
         })
+        .catch(error => console.log(error));
+      }
       
-      fetch(`http://127.0.0.1:8000/api/cohort/?degree=${shortcode}`).then(response => response.json())
+      if (cohorts == 0){
+        fetch(`http://127.0.0.1:8000/api/cohort/?degree=${shortcode}`).then(response => response.json())
         .then(data => {
           setCohorts(data);
         })
         .catch(error => console.log(error));
+      }
     });
     
     const displayCohorts = () => {

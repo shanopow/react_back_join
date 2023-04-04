@@ -39,7 +39,7 @@ const drawModule = (jsl) => {
 //
 function Student() {
     const { id } = useParams();
-    const [student, setstudent] = useState({});
+    const [student, setstudent] = useState([]);
     
     const [grades, setgrades] = useState([]);
     
@@ -47,9 +47,14 @@ function Student() {
     const [delivered, setcohort] = useState();
 
     useEffect(() => {
-      fetch1();
-      fetch2();
-      fetch3();
+      if (student == 0);
+        fetch1();
+      
+      if (grades == 0);
+        fetch2();
+      
+      if (modules==0);
+        fetch3();
     });
     
     const fetch1 = async () =>{

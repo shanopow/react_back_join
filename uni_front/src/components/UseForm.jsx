@@ -38,7 +38,7 @@ function useForm({ form, additionalData, endpointUrl }) {
           return response.json();
         })
         .then(() => {
-          setMessage("We'll be in touch soon.");
+          setMessage("Sent to the endpoint.");
           setStatus("success");
         })
         .catch((err) => {

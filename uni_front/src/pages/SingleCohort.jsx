@@ -28,19 +28,24 @@ const drawStudents = (jsl) =>{
 
 function Cohort() {
     const { id } = useParams();
-    const [cohort, setcohort] = useState({});
+    const [cohort, setcohort] = useState([]);
     const [students, setstudents] = useState([]);
     useEffect(() => {
-      fetch(`http://127.0.0.1:8000/api/cohort/${id}`).then(response => response.json())
-      .then(data => {
-        setcohort(data);
-      })
+      if(cohort == 0){
+        fetch(`http://127.0.0.1:8000/api/cohort/${id}`).then(response => response.json())
+        .then(data => {
+          setcohort(data);
+        })
+        .catch(error => console.log(error));
+      }
       
-      fetch(`http://127.0.0.1:8000/api/student/?cohort=${id}`).then(response => response.json())
-      .then(data => {
-        setstudents(data)
-      })
-      .catch(error => console.log(error));
+      if (students == 0){
+        fetch(`http://127.0.0.1:8000/api/student/?cohort=${id}`).then(response => response.json())
+        .then(data => {
+          setstudents(data)
+        })
+        .catch(error => console.log(error));
+      }
     });
     
     const displayStudents = () => {

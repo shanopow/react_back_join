@@ -15,15 +15,18 @@ const drawModule = (jsl) => {
   
 function Module() {
     const { code } = useParams();
-    const [module, setmodule] = useState({})
+    const [module, setmodule] = useState([])
     useEffect(() => {
-      fetch(`http://127.0.0.1:8000/api/module/${code}`)
+      if (module == 0){
+        fetch(`http://127.0.0.1:8000/api/module/${code}`)
         .then(response => response.json())
         .then(data => {
           setmodule(data);
         })
         .catch(error => console.log(error));
+      }
     });
+
     return (
       <div>
         <hr/>
