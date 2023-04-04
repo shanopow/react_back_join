@@ -7,15 +7,16 @@ import PageNotFound from "./pages/404";
 
 import Degree from "./pages/SingleDegree";
 import Degrees from "./pages/Degrees";
-import DegreeForm from "./displays/forms/DegreeForm";
+import DegreeForm from "./components/displays/forms/DegreeForm";
 
 import Cohort from "./pages/SingleCohort";
 import Cohorts from "./pages/Cohorts";
-import CohortForm from "./pages/CohortForm";
+import CohortForm from "./components/displays/forms/CohortForm";
 
 import Module from "./pages/SingleModule";
 import Modules from "./pages/Modules";
 import ModuleDelivered from "./pages/ModuleDelivered";
+import ModuleForm from "./components/displays/forms/ModuleForm";
 
 import Students from "./pages/Students";
 import Student from "./pages/SingleStudent";
@@ -43,7 +44,7 @@ export default function App() {
  
           <Route path="students" element={<Students />} />
           <Route path="students/:id" element={<Student />} />
-          <Route path="students/new" element={<ModuleForm />} />
+          <Route path="students/new" element={<StudentForm />} />
 
 
           <Route path="*" element={<PageNotFound />} />

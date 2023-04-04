@@ -1,7 +1,7 @@
 import { useRef } from "react";
-import useForm from "./UseForm";
+import useForm from "../../UseForm";
 
-const FORM_ENDPOINT = "http://127.0.0.1:8000/api/degree/"; // TODO - fill on the later step
+const FORM_ENDPOINT = "http://127.0.0.1:8000/api/student/"; // TODO - fill on the later step
 
 const StudentForm = () => {
   const formElement = useRef(null);
