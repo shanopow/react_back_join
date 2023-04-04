@@ -28,7 +28,8 @@ function Degree() {
     const [cohorts, setCohorts] = useState([]);
     useEffect(() => {
       if (degree == 0){
-        fetch(`http://127.0.0.1:8000/api/degree/${shortcode}`).then(response => response.json())
+        fetch(`http://127.0.0.1:8000/api/degree/${shortcode}`)
+        .then(response => response.json())
         .then(data => {
           setdegree(data);
         })
@@ -36,7 +37,8 @@ function Degree() {
       }
       
       if (cohorts == 0){
-        fetch(`http://127.0.0.1:8000/api/cohort/?degree=${shortcode}`).then(response => response.json())
+        fetch(`http://127.0.0.1:8000/api/cohort/?degree=${shortcode}`)
+        .then(response => response.json())
         .then(data => {
           setCohorts(data);
         })

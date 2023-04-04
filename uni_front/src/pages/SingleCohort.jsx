@@ -32,7 +32,7 @@ function Cohort() {
     const [students, setstudents] = useState([]);
     useEffect(() => {
       if(cohort == 0){
-        fetch(`http://127.0.0.1:8000/api/cohort/${id}`).then(response => response.json())
+          fetch(`http://127.0.0.1:8000/api/cohort/${id}`).then(response => response.json())
         .then(data => {
           setcohort(data);
         })

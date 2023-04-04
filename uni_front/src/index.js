@@ -21,6 +21,7 @@ import ModuleForm from "./components/displays/forms/ModuleForm";
 import Students from "./pages/Students";
 import Student from "./pages/SingleStudent";
 import StudentForm from "./components/displays/forms/StudentForm";
+import StudentGrade from "./pages/StudentGrade";
 
 export default function App() {
   return (
@@ -45,7 +46,7 @@ export default function App() {
           <Route path="students" element={<Students />} />
           <Route path="students/:id" element={<Student />} />
           <Route path="students/new" element={<StudentForm />} />
-
+          <Route path="students/:id/:code" element={<StudentGrade />} />
 
           <Route path="*" element={<PageNotFound />} />
         </Route>
