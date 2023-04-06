@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const drawCohort = (jsl) => {
   return (
@@ -7,6 +8,9 @@ const drawCohort = (jsl) => {
       <p>Year: {jsl.year}</p>
       <p>Degree: {jsl.degree}</p>
       <p>Name: {jsl.name}</p>
+      <li>
+        <Link to={`/cohorts/${jsl.id}`}>More Info</Link>
+      </li>
     </div>
   )
 };

@@ -1,10 +1,14 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const drawDegree = (jsl) => {
   return (
     <div>
       <h2>{jsl.shortcode}</h2>
       <p>Full Name: {jsl.full_name}</p>
+      <li>
+        <Link to={`/degrees/${jsl.shortcode}`}>More Info</Link>
+      </li>
     </div>
   )
 };

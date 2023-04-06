@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
+import GradeForm from '../components/displays/forms/GradeForm';
 
 const drawGrades = (jsl) => {
     return (
@@ -30,6 +31,8 @@ function StudentGrade() {
 
     const [grades, setgrades] = useState([]);
 
+    const [gid, setgid] = useState();
+
     useEffect(() => {      
     
       if (modules == 0){
@@ -44,13 +47,14 @@ function StudentGrade() {
 
       if (grades == 0){
       fetch(`http://127.0.0.1:8000/api/grade/?student=${id}&module=${code}`)
-      .then(response => response.json())
-      .then(data => {
-        setgrades(data[0])
-      })
-      .catch(error => console.log(error));
+        .then(response => response.json())
+        .then(data => {
+          setgrades(data[0]);
+          setgid(data[0].id);
+        })
+        .catch(error => console.log(error));
       } 
-  
+
     });
 
     return (
@@ -63,6 +67,9 @@ function StudentGrade() {
         
         <h1> Module</h1>
         {drawModule(modules)}
+      
+        <h1> Change the Grade</h1>
+        {GradeForm(gid)}
       </div>
     )
   }
