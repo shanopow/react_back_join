@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 const drawModule = (jsl) => {
   
   return (
-    <div>
-      <h2>{jsl.code}</h2>
+    <article>
+      <header>{jsl.code}</header>
       <p>Full Name: {jsl.full_name}</p>
       <p>Delivered to: <ul>{jsl.delivered_to.map(element => <li>{element}</li>)} </ul></p> 
       <p>Ca Weight: {jsl.ca_split}</p>
       <li>
             <Link to={`/modules/${jsl.code}`}>More Info</Link>
         </li>
-    </div>
+    </article>
   )
 };
 

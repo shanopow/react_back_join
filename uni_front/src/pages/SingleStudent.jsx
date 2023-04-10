@@ -4,13 +4,13 @@ import { useParams } from 'react-router-dom';
 
 const drawStudent = (jsl) =>{
     return (
-      <div>
-        <h3>ID: {jsl.student_id}</h3>
+      <article>
+        <header>ID: {jsl.student_id}</header>
         <p>First Name: {jsl.first_name}</p>
         <p>Last Name: {jsl.last_name}</p>
         <p>Cohort: {jsl.cohort}</p>
         <p>Email: {jsl.email}</p>
-      </div>
+      </article>
     )
   };
 

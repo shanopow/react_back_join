@@ -4,12 +4,12 @@ import { useParams } from 'react-router-dom';
 
 const drawModule = (jsl) => {
     return (
-        <div>
-        <h3>{jsl.code}</h3>
+        <article>
+        <header>{jsl.code}</header>
         <p>Full Name: {jsl.full_name}</p>
         <p>Delivered to: <ul>{jsl.delivered_to.map(element => <li>{element}</li>)} </ul></p> 
         <p>Ca Weight: {jsl.ca_split}</p>
-      </div>
+      </article>
     )
   };
   

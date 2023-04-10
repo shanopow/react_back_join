@@ -4,12 +4,12 @@ import { Link, useParams } from 'react-router-dom';
 
 const drawCohorts = (jsl) => {  
   return (
-      <div>
-        <h3>ID: {jsl.id}</h3>
+      <article>
+        <header>ID: {jsl.id}</header>
         <p>Year: {jsl.year}</p>
         <p>Degree: {jsl.degree}</p>
         <p>Name: {jsl.name}</p>
-      </div>
+      </article>
     )
   };
 

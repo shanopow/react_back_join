@@ -23,6 +23,9 @@ import Student from "./pages/SingleStudent";
 import StudentForm from "./components/displays/forms/StudentForm";
 import StudentGrade from "./pages/StudentGrade";
 
+//stylesheet
+import '@picocss/pico'
+
 export default function App() {
   return (
     <BrowserRouter>

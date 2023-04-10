@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 
 const drawCohort = (jsl) => {
   return (
-    <div>
-      <h2>{jsl.id}</h2>
+    <article>
+      <header>{jsl.id}</header>
       <p>Year: {jsl.year}</p>
       <p>Degree: {jsl.degree}</p>
       <p>Name: {jsl.name}</p>
       <li>
         <Link to={`/cohorts/${jsl.id}`}>More Info</Link>
       </li>
-    </div>
+    </article>
   )
 };
 

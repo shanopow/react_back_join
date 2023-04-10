@@ -5,7 +5,8 @@ import Navbar from "../components/navbar";
 const Layout = () => {
   return (
     <>
-      <Navbar />
+      <html data-theme="dark"></html>
+      <Navbar />
       <Outlet />
     </>
   );

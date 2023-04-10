@@ -5,11 +5,11 @@ import GradeForm from '../components/displays/forms/GradeForm';
 
 const drawGrades = (jsl) => {
     return (
-      <div>
+      <article>
         <p>Ca Mark: {jsl.ca_mark}</p>
         <p>Exam mark: {jsl.exam_mark}</p>
         <p>Total Grade: {jsl.total_grade}</p>
-      </div>
+      </article>
     )
 };
 

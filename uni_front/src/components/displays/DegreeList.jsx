@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 
 const drawDegree = (jsl) => {
   return (
-    <div>
-      <h2>{jsl.shortcode}</h2>
+    <article>
+      <header>{jsl.shortcode}</header>
       <p>Full Name: {jsl.full_name}</p>
       <li>
         <Link to={`/degrees/${jsl.shortcode}`}>More Info</Link>
       </li>
-    </div>
+    </article>
   )
 };
 
