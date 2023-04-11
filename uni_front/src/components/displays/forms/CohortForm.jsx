@@ -26,14 +26,14 @@ const CohortForm = () => {
   if (status === "error") {
     return (
       <>
-        <div>Something bad happened!</div>
+        <div>Error!</div>
         <div>{message}</div>
       </>
     );
   }
 
   return (
-    <form
+    <form data-theme="light"
       action={FORM_ENDPOINT}
       onSubmit={handleSubmit}
       method="POST"
