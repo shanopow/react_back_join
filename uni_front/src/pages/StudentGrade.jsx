@@ -46,7 +46,7 @@ function StudentGrade() {
 
 
       if (grades == 0){
-      fetch(`http://127.0.0.1:8000/api/grade/?student=${id}&module=${code}`)
+        fetch(`http://127.0.0.1:8000/api/grade/?student=${id}&module=${code}`)
         .then(response => response.json())
         .then(data => {
           setgrades(data[0]);
