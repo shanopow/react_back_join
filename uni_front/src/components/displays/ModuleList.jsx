@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 const drawModule = (jsl) => {
-  
   return (
     <article>
       <header>{jsl.code}</header>
@@ -21,7 +20,7 @@ function ModuleList() {
   
   useEffect(() => {
     if (modules == 0){
-      fetch("http://127.0.0.1:8000/api/module")
+      fetch(`http://127.0.0.1:8000/api/module`)
       .then(response => response.json())
       .then(data => {
         setmodules(data)

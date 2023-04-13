@@ -13,7 +13,7 @@ import Cohort from "./pages/SingleCohort";
 import Cohorts from "./pages/Cohorts";
 import CohortForm from "./components/displays/forms/CohortForm";
 
-import Module from "./pages/SingleModule";
+import SingleModule from "./pages/SingleModule";
 import Modules from "./pages/Modules";
 import ModuleDelivered from "./pages/ModuleDelivered";
 import ModuleForm from "./components/displays/forms/ModuleForm";
@@ -42,7 +42,7 @@ export default function App() {
           <Route path="cohorts/new" element={<CohortForm />} />
  
           <Route path="modules" element={<Modules />} />
-          <Route path="modules/:code" element={<Module />} />
+          <Route path="modules/:code" element={<SingleModule />} />
           <Route path="modules/delivered/:delivered" element={<ModuleDelivered />} />
           <Route path="modules/new" element={<ModuleForm />} />
  

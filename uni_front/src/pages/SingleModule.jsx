@@ -1,27 +1,27 @@
 import React from 'react';
 import { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
-
+     
 const drawModule = (jsl) => {
     return (
         <article>
         <header>{jsl.code}</header>
         <p>Full Name: {jsl.full_name}</p>
-        <p>Delivered to: <ul>{jsl.delivered_to.map(element => <li>{element}</li>)} </ul></p> 
         <p>Ca Weight: {jsl.ca_split}</p>
+        <p>Delivered to: <ul>{jsl.delivered_to} </ul></p> 
       </article>
     )
   };
   
-function Module() {
+function SingleModule() {
     const { code } = useParams();
-    const [module, setmodule] = useState([])
+    const [modules, setmodules] = useState([]);
     useEffect(() => {
-      if (module == 0){
+      if (modules == 0){
         fetch(`http://127.0.0.1:8000/api/module/${code}`)
         .then(response => response.json())
         .then(data => {
-          setmodule(data);
+          setmodules(data)
         })
         .catch(error => console.log(error));
       }
@@ -30,9 +30,9 @@ function Module() {
     return (
       <div>
         <hr/>
-        {drawModule(module)}
+        {drawModule(modules)}
       </div>
     )
   }
 
-export default Module
+export default SingleModule
